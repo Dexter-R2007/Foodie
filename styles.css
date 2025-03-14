@@ -239,3 +239,28 @@ button{
     right: 10px;
     cursor: pointer;
 }
+
+.info{
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.social{
+    text-align: center;
+    font-size: 2.5rem;
+    gap: 10px;
+}
+
+.social a{
+    color: black;
+}
+
+footer{
+    background-color: #968126a0;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center;
+}
