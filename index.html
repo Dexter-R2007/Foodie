@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Foodie - Order Your Favorite Meals</title>
     <link rel="icon" href="img/Burger.jpg">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">🍔 Foodie</div>
+        <div class="logo"><a href="#home">🍔 Foodie</a></div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleBasket()">🛒 <span id="basket-count">0</span> in Basket</a></li>
             </ul>
         </nav>
     </header>
@@ -30,26 +32,93 @@
     </section>
     <section id="menu">
         <h2>Menu</h2>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="img/Burger.jpg" alt="Burger">
-                <h3>Cheeseburger</h3>
-                <p>Juicy and delicious cheeseburger with fresh ingredients.</p>
+        <div class="menu-container">
+            <button class="left-btn">◀</button>
+            <div class="menu-wrapper">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="img/Burger.jpg" alt="Burger">
+                        <h3>Cheeseburger</h3>
+                        <button onclick="addToBasket('Cheeseburger')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Pizza.jpg" alt="Pizza">
+                        <h3>Pizza</h3>
+                        <button onclick="addToBasket('Margherita Pizza')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Pasta.jpg" alt="Pasta">
+                        <h3>Spaghetti</h3>
+                        <button onclick="addToBasket('Spaghetti Bolognese')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Shawarma.jpg" alt="Shawarma">
+                        <h3>Shawarma</h3>
+                        <button onclick="addToBasket('Shawarma')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Lasagne.jpg" alt="Lasagne">
+                        <h3>Lasagne</h3>
+                        <button onclick="addToBasket('Lasagne')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Tacos.jpg" alt="Tacos">
+                        <h3>Tacos</h3>
+                        <button onclick="addToBasket('Tacos')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Monada.png" alt="Soft drinks">
+                        <h3>Soft drinks</h3>
+                        <button onclick="addToBasket('Soft drinks')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Water.jpg" alt="Water">
+                        <h3>Water 1.5L</h3>
+                        <button onclick="addToBasket('Water 1.5L')">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Juice.jpg" alt="Juice">
+                        <h3>Juice</h3>
+                        <button onclick="addToBasket('Juice')">Order</button>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="img/Pizza.jpg" alt="Pizza">
-                <h3>Margherita Pizza</h3>
-                <p>Classic Italian pizza with fresh basil and mozzarella.</p>
+            <button class="right-btn">▶</button>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        
+        <div class="contact-container">
+            <div class="info">
+                <i class='bx bxs-phone'></i>
+                <p>+123 456 789</p>
             </div>
-            <div class="menu-item">
-                <img src="img/Pasta.png" alt="Pasta">
-                <h3>Spaghetti Bolognese</h3>
-                <p>Rich and hearty spaghetti with homemade sauce.</p>
+            <div class="info">
+                <i class='bx bxs-envelope'></i>
+                <p>contact@email.com</p>
+            </div>
+            <div class="info">
+                <i class='bx bxs-map'></i>
+                <p>123 Rue, Ville</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="social-container">
+            <div class="social">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-    </section>
+    <footer> &copy; Foodie 2025.</footer>
+
+    <div id="basket-box">
+        <span class="close-btn" onclick="toggleBasket()">X</span>
+        <h3>Your Orders</h3>
+        <ul id="basket-items">
+        </ul>
+    </div>
 </body>
 </html>
