@@ -36,19 +36,19 @@
                 <img src="img/Burger.jpg" alt="Burger">
                 <h3>Cheeseburger</h3>
                 <h3>20dh</h3>
-                <button onclick="addToBasket('Cheeseburger :  20dh')">Order</button>
+                <button onclick="addToBasket({'Cheeseburger :':20})">Order</button>
             </div>
             <div class="menu-item">
                 <img src="img/Pizza.jpg" alt="Pizza">
                 <h3>Margherita Pizza</h3>
                 <h3>40dh</h3>
-                <button onclick="addToBasket('Margherita Pizza : 40dh')">Order</button>
+                <button onclick="addToBasket({'Margherita Pizza :':40})">Order</button>
             </div>
             <div class="menu-item">
                 <img src="img/Pasta.jpg" alt="Pasta">
                 <h3>Spaghetti Bolognese</h3>
                 <h3>50dh</h3>
-                <button onclick="addToBasket('Spaghetti Bolognese : 50dh')">Order</button>
+                <button onclick="addToBasket({'Spaghetti Bolognese :':50})">Order</button>
             </div>
         </div>
         <br>
@@ -57,19 +57,19 @@
                 <img src="img/Shawarma.jpg" alt="Shawarma">
                 <h3>Shawarma</h3>
                 <h3>25dh</h3>
-                <button onclick="addToBasket('Shawarma : 25dh')">Order</button>
+                <button onclick="addToBasket({'Shawarma :':25})">Order</button>
             </div>
             <div class="menu-item">
                 <img src="img/Monada.png" alt="Soft drinks">
                 <h3>Soft drinks</h3>
                 <h3>13dh</h3>
-                <button onclick="addToBasket('Soft drinks : 13dh')">Order</button>
+                <button onclick="addToBasket({'Soft drinks :':13})">Order</button>
             </div>
             <div class="menu-item">
                 <img src="img/Water.jpg" alt="Water">
                 <h3>Water 1.5L</h3>
                 <h3>07dh</h3>
-                <button onclick="addToBasket('Water 1.5L : 07dh')">Order</button>
+                <button onclick="addToBasket({'Water 1.5L :':7})">Order</button>
             </div>
         </div>
     </section>
@@ -83,6 +83,8 @@
         <h3>Your Orders</h3>
         <ul id="basket-items">
         </ul>
+        <center><h3>Total: <span id="basket-total">0</span>dh</h3></center>
+        <button>Clear Basket</button>
     </div>
 </body>
 </html>
