@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Foodie - Order Your Favorite Meals</title>
@@ -31,59 +32,102 @@
     </section>
     <section id="menu">
         <h2>Menu</h2>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="img/Burger.jpg" alt="Burger">
-                <h3>Cheeseburger</h3>
-                <h3>20dh</h3>
-                <button onclick="addToBasket({'Cheeseburger :':20})">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Pizza.jpg" alt="Pizza">
-                <h3>Margherita Pizza</h3>
-                <h3>40dh</h3>
-                <button onclick="addToBasket({'Margherita Pizza :':40})">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Pasta.jpg" alt="Pasta">
-                <h3>Spaghetti Bolognese</h3>
-                <h3>50dh</h3>
-                <button onclick="addToBasket({'Spaghetti Bolognese :':50})">Order</button>
-            </div>
-        </div>
-        <br>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="img/Shawarma.jpg" alt="Shawarma">
-                <h3>Shawarma</h3>
-                <h3>25dh</h3>
-                <button onclick="addToBasket({'Shawarma :':25})">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Monada.png" alt="Soft drinks">
-                <h3>Soft drinks</h3>
-                <h3>13dh</h3>
-                <button onclick="addToBasket({'Soft drinks :':13})">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Water.jpg" alt="Water">
-                <h3>Water 1.5L</h3>
-                <h3>07dh</h3>
-                <button onclick="addToBasket({'Water 1.5L :':7})">Order</button>
-            </div>
-        </div>
+        <div class="menu-container">
+            <button class="left-btn">◀</button>
+            <div class="menu-wrapper">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="img/Burger.jpg" alt="Burger">
+                        <h3>Cheeseburger</h3>
+                        <h4>35 DH</h4>
+                        <button onclick="addToBasket({'Cheeseburger': 35})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Pizza.jpg" alt="Pizza">
+                        <h3>Pizza</h3>
+                        <h4>40 DH</h4>
+                        <button onclick="addToBasket({'Pizza': 40})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Pasta.jpg" alt="Pasta">
+                        <h3>Spaghetti</h3>
+                        <h4>60 DH</h4>
+                        <button onclick="addToBasket({'Spaghetti': 60})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Shawarma.jpg" alt="Shawarma">
+                        <h3>Shawarma</h3>
+                        <h4>35 DH</h4>
+                        <button onclick="addToBasket({'Shawarma': 35})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Lasagne.jpg" alt="Lasagne">
+                        <h3>Lasagne</h3>
+                        <h4>55 DH</h4>
+                        <button onclick="addToBasket({'Lasagne': 55})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Tacos.jpg" alt="Tacos">
+                        <h3>Tacos</h3>
+                        <h4>40 DH</h4>
+                        <button onclick="addToBasket({'Tacos': 40})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Monada.png" alt="Soft drinks">
+                        <h3>Soft drinks</h3>
+                        <h4>15 DH</h4>
+                        <button onclick="addToBasket({'Soft drinks': 15})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Water.jpg" alt="Water">
+                        <h3>Water 1.5L</h3>
+                        <h4>10 DH</h4>
+                        <button onclick="addToBasket({'Water 1.5L': 10})">Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/Juice.jpg" alt="Juice">
+                        <h3>Juice</h3>
+                        <h4>18 DH</h4>
+                        <button onclick="addToBasket({'Juice': 18})">Order</button>
+                    </div>
+                </div>
+            </div>  
+            <button class="right-btn">▶</button>
     </section>
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
+    <section id="contact">
+        <h2>Contact</h2>
         
+        <div class="contact-container">
+            <div class="info">
+                <i class='bx bxs-phone'></i>
+                <p>+123 456 789</p>
+            </div>
+            <div class="info">
+                <i class='bx bxs-envelope'></i>
+                <p>contact@email.com</p>
+            </div>
+            <div class="info">
+                <i class='bx bxs-map'></i>
+                <p>123 Rue, Ville</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="social-container">
+            <div class="social">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
     </section>
+    <footer> &copy; Foodie 2025.</footer>
 
     <div id="basket-box">
         <span class="close-btn" onclick="toggleBasket()">X</span>
         <h3>Your Orders</h3>
         <ul id="basket-items">
         </ul>
-        <center><h3>Total: <span id="basket-total">0</span>dh</h3></center>
+        <center><h3>Total : <span id="basket-total">0</span> DH</h3></center>
         <button>Clear Basket</button>
     </div>
 </body>

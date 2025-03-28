@@ -67,30 +67,50 @@ section {
     display: block;
     border-radius: 10px;
 }
-#menu{
-    height: auto;
-}
+
 h2{
     font-size: 4rem;
 }
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.menu-wrapper {
+    width: 60%;
+    overflow: hidden;
+}
+
 .menu-items {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 4px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .menu-item {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    flex: 0 0 30%;
     text-align: center;
+    background: #fff;
+    padding: 10.5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .menu-item:hover{
     animation: pulse;
     animation-duration: 2s;
+}
+
+.left-btn, .right-btn {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 .menu-item img {
@@ -100,10 +120,13 @@ h2{
 
 #contact {
     background-color: #968126a0;
+    padding: 125px;
 }
 
 #menu {
     background-color: #6d2c21;
+    padding: 65px;
+    height: auto;
 }
 
 #home {
@@ -238,4 +261,79 @@ button{
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+
+.contact-container, .social-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    flex-direction: column;
+}
+
+.info i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #6d2c21;
+    color: white;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.info i:hover {
+    background-color: #4e1f17;
+    transform: scale(1.1);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #6d2c21;
+    color: white;
+    font-size: 2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social a:hover {
+    background-color: white;
+    color: #6d2c21;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #6d2c21;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    font-size: 2.25rem;
 }
