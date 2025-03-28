@@ -7,24 +7,33 @@ function toggleBasket() {
 }
 
 // Ajouter un élément au panier
-function addToBasket(item) {
-    basket.push(item);
-    updateBasketDisplay();
-}
+// function addToBasket(item) {
+//     basket.push(item);
+//     updateBasketDisplay();
+// }
 
 // Mettre à jour l'affichage du panier
 function updateBasketDisplay() {
     const basketItems = document.getElementById('basket-items');
     basketItems.innerHTML = ''; // Vider les éléments précédents
-
+    const basketTotal = document.getElementById('basket-total');
+    let total = 0;
     basket.forEach(item => {
         const listItem = document.createElement('li');
-        listItem.textContent = item;
+        const listItemPrice = document.createElement('span');
+        listItemPrice.style.float = 'right';
+        listItemPrice.style.color = 'green';
+        listItemPrice.style.fontWeight = 'bold';
+        listItem.textContent = item.label;
+        listItemPrice.textContent = item.price;
         basketItems.appendChild(listItem);
+        listItem.appendChild(listItemPrice);
+        total += item.price;
+        basketTotal.textContent = total;
     });
 }
 function addToBasket(item) {
-    basket.push(item);
+    basket.push({ label: Object.keys(item)[0], price: Object.values(item)[0] }); 
     updateBasketDisplay();
     updateBasketCount(); // Mise à jour du compteur de panier
 }
