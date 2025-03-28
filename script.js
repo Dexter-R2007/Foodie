@@ -36,3 +36,32 @@ function updateBasketCount() {
 
 
 
+
+
+
+const menuItems = document.querySelector(".menu-items");
+const leftBtn = document.querySelector(".left-btn");
+const rightBtn = document.querySelector(".right-btn");
+
+let index = 0;
+const itemsPerView = 3; // Nombre d'éléments visibles à la fois
+const totalItems = document.querySelectorAll(".menu-item").length;
+const totalPages = Math.ceil(totalItems / itemsPerView);
+
+function goToSlide(slideIndex) {
+    menuItems.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+function nextSlide() {
+    index = (index + 1) % totalPages; // Revenir à 0 après le dernier slide
+    goToSlide(index);
+}
+
+function prevSlide() {
+    index = (index - 1) % totalPages; // Corrigé pour éviter un index négatif
+    goToSlide(index);
+}
+
+// Ajouter les événements pour les boutons
+leftBtn.addEventListener("click", prevSlide);
+rightBtn.addEventListener("click", nextSlide);
